@@ -2,7 +2,7 @@
 $server = "localhost";
 $username = "titi";
 $password = "titi";
-$db = "stock";
+$db = "acteurMatchFoot";
 $conn = mysqli_connect($server,$username,$password,$db);
 
 ?>

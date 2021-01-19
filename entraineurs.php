@@ -6,9 +6,9 @@ switch ($request_method) {
     case 'GET':
         if (!empty($_GET["id"])) {
             $id = intval($_GET["id"]);
-            getProduct($id);
+            getNameEntraineur($id);
         } else {
-            getProducts();
+            getNameEntraineurs();
         }
         break;
         case 'PUT':
@@ -17,13 +17,13 @@ switch ($request_method) {
             break;
     default:
         echo "Par defaut : ";
-        getProducts();
+        getNameEntraineurs();
         break;
 }
-function getProducts()
+function getNameEntraineurs()
 {
     global $conn;
-    $query = "SELECT * FROM produit";
+    $query = "SELECT * FROM entraineurs";
     $response = array();
     $result = mysqli_query($conn, $query);
     while ($row = mysqli_fetch_array($result)) {
@@ -33,10 +33,10 @@ function getProducts()
     echo json_encode($response, JSON_PRETTY_PRINT);
 }
 
-function getProduct($id)
+function getNameEntraineur($id)
 {
     global $conn;
-    $query = "SELECT * FROM produit WHERE id = '" . $id . "'";
+    $query = "SELECT * FROM entraineurs WHERE id = '" . $id . "'";
     $response = array();
     $result = mysqli_query($conn, $query);
     while ($row = mysqli_fetch_array($result)) {
