@@ -1,5 +1,5 @@
 <?php
-$url = "http://localhost/Clay/testREST/produits/1";
+$url = "http://localhost/Clay/apiREST/";
 $data = array('name' => 'MAC', 'description' => 'Ordinateur portable', 'price'=> '9658', 'category' => '2');
 
 $ch = curl_init($url);

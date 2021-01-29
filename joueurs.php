@@ -71,6 +71,6 @@ function updateProduct($id)
     echo json_encode($response, JSON_PRETTY_PRINT);
 }
 
-
+$url = "http"
 
 ?>
