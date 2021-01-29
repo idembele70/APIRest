@@ -1,6 +1,6 @@
 <?php
 
-$url = 'http://localhost/Clay/apiREST/';
+$url = 'http://localhost/Clay/apiREST/entaineurs';
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
